@@ -4,12 +4,12 @@ This repository holds the code for the Udemy course found [here](https://www.ude
 
 ## Running files
 
-The project uses `nodemon` to run files with an `npm start` command. To run a file, use `-- [filename]` with the `npm start` command. For example:
+The project uses `nodemon` to run files with an `npm start` command. To run a file, use `-- [filepath]` with the `npm start` command. For example:
 
 ```bash
 npm start -- ./index.js
 
 or
 
-npm start -- ./add1_timing.js
+npm start -- ./snippets/add1_timing.js
 ```
