@@ -92,3 +92,44 @@ sumZero([-3, -2, -1, 0, 1, 2, 3]); // [-3,3]
 sumZero([-2, 0, 1, 3]); // undefined
 sumZero([1, 2, 3]); // undefined
 ```
+
+##### Sliding Window
+
+This pattern involves creating a **window** which can either be an array or number from one position to another.
+
+Depending on a certain condition, the window either increases or closes (and a new window is created).
+
+Very useful for keeping track of a subset of data in an array/string etc.
+
+Example:
+Find the longest sequence of unique characters in a string.
+
+```js
+longestUniqueSequence("hellothere"); // lother
+```
+
+Or, find max sum of n consecutive elements in an array.
+
+```js
+// see snippets/maxSubarraySum.js
+
+maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10, 8+2
+maxSubarraySum([4, 2, 1, 6], 1); // 6
+```
+
+##### Divide and Conquer
+
+This pattern involves dividing a dataset into smaller chunks and then repeating a process with a subset of data. This pattern can tremendously **decrease time complexity**.
+
+Quick sort and merge sort are two sorting algorithms that employ a divide and conquer strategy. Binary search and binary search trees also use divide and conquer.
+
+Example:
+Given a **sorted** array of integers, write a function callsed search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1.
+
+```js
+// see snippets/search.js
+
+search([1, 2, 3, 4, 5, 6], 4); // 3
+search([1, 2, 3, 4, 5, 6], 6); // 5
+search([1, 2, 3, 4, 5, 6], 11); // -1
+```
