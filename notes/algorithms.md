@@ -4,14 +4,14 @@
 
 A process or set of steps to accomplish a certain task.
 
-## Problem Solving Techniques
+## Problem Solving
 
 ### How do you improve?
 
 1. **Devise** a plan for solving problems.
 2. **Master** common problem solving patterns.
 
-#### What is the plan?
+#### Problem Solving Approach
 
 1. **Understand The Problem**
    1. Can I restate the problem in my own words?
@@ -46,3 +46,36 @@ A process or set of steps to accomplish a certain task.
    8. How have other people solved this problem? Ask this question for interviewers.
 
 _George Polya - How To Solve It_ is a great resource for problem solving techniques.
+
+#### Problem Solving Patterns
+
+There are many common patterns that arise during problems, some named, some only known concepts. They act as a blueprint to looking at the problem and how to solve it. Here are a few:
+
+- Frequency Counter
+- Multiple Pointers
+- Sliding Window
+- Divide and Conquer
+- Dynamic Programming
+- Greedy Algorithms
+- Backtracking
+
+##### Frequency Counters
+
+This pattern uses objects or sets to collect values and frequencies of values. This can often avoid the need for nested loops or `O(n^2)` operations with arrays / strings.
+
+This is commonly used when comparing equality or likeness of individual items that are part of two different things, anagrams, squared versions, etc.
+
+Example:
+Write a function called **same** which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same.
+
+```js
+// see snippets/same.js
+
+same([1, 2, 3], [4, 1, 9]); // true
+same([1, 2, 3], [1, 9]); // false
+same([1, 2, 1], [4, 4, 1]); // false (must be same frequency)
+```
+
+##### Multiple Pointers
+
+Creating **pointers**, or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition, is **very** efficient for solving problems with minimal space complexity as well.
