@@ -111,10 +111,10 @@ longestUniqueSequence("hellothere"); // lother
 Or, find max sum of n consecutive elements in an array.
 
 ```js
-// see snippets/maxSubarraySum.js
+// see snippets/maxSubArraySum.js
 
-maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10, 8+2
-maxSubarraySum([4, 2, 1, 6], 1); // 6
+maxSubArraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10, 8+2
+maxSubArraySum([4, 2, 1, 6], 1); // 6
 ```
 
 ##### Divide and Conquer

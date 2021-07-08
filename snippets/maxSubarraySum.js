@@ -10,7 +10,7 @@
 
 // naive solution
 // O(n^2) tiem complexity
-function maxSubarraySum(arr, n) {
+function maxSubArraySum(arr, n) {
   if (n > arr.length) {
     return null;
   }
@@ -32,7 +32,7 @@ function maxSubarraySum(arr, n) {
 // refactored - O(n) time
 // move window, but just move it one index, subtract first index, add next index in
 // we don't have to recalculate all the numbers in the window each time, since only item will be different
-function maxSubarraySum(arr, n) {
+function maxSubArraySum(arr, n) {
   let maxSum = 0;
   let tmpSum = 0;
 
@@ -53,5 +53,5 @@ function maxSubarraySum(arr, n) {
   return maxSum;
 }
 
-console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2));
-console.log(maxSubarraySum([4, 2, 1, 6], 1));
+console.log(maxSubArraySum([1, 2, 5, 2, 8, 1, 5], 2));
+console.log(maxSubArraySum([4, 2, 1, 6], 1));
