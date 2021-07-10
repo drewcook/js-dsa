@@ -156,6 +156,8 @@ function insertionSort() {}
 
 Insertion sort can work maybe if we're polling new data and need to insert items a la carte into an already sorted list. It can be efficient because we are working with an already sorted array and need to insert it into a spot quickly.
 
+Or, IOW, Insertion sort is good when needing to have a long running sorting happening on the fly when needed.
+
 ## Comparisons
 
 - All are `O(1)` space complexity.
@@ -166,3 +168,10 @@ They differ in their best case scenario:
 - Bubble Sort - `O(n)`
 - Insertion Sort - `O(n)`
 - Selection Sort - `O(n^2)`
+
+### Recap
+
+- Sorting is _fundamental_
+- Bubble sort, selection sort, and insertion sort are all roughly equivalent
+- All have average time complexities that are quadratic
+- We can do better...but we need more complex algorithms like quick sort, merge sort, heap sort, radix sort, etc.
