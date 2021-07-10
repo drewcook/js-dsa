@@ -95,6 +95,74 @@ function swap(arr, idx1, idx2) {
 
 // ES6
 const swap = (arr, idx1, idx2) => {
-  [arr[idx1], arr[idx2]] = [arr[idx2], arr[id2]];
+  [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
 };
 ```
+
+## Selection Sort
+
+Selection sort is similar to bubble sort, but instead of first placing large values into a sorted position at the end of the array, we place small values into position one at a time.
+
+We still move from the beginning to the end, but the sorted data is accumulated at the beginning. As we increment each time, we compare the item with the remaining list one at a time, and we keep track of the minimum each time. When we get to the end, we swap the minimum with the original index we started at. Then we increment that original index one time and repeat. This results in each pass finding the minimum, and inserting it at the next smallest spot.
+
+- Iterate and compare to find the minimum
+- Swap at the end of iterating
+- Put it in the beginning
+
+Not terribly efficient - `O(n^2)` time complexity
+
+```js
+// see snippets/sortSelection.js
+
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let min = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    if (min !== i) {
+      swap(arr, min, i);
+    }
+  }
+  return arr;
+}
+```
+
+The only scenario selection sort is better than bubble sort is where you want to minimize the number of swaps you have to do. We iterate and only make one swap at the end of each loop. If we're writing the swap to memory, then selection sort is better.
+
+## Insertion Sort
+
+Insertion sort is another elementary sorting algorithm. It is similar to both bubble and selection sort, however a few key distinctions that make insertion sort more efficient.
+
+- Builds up the sort by gradually creating a larger left half which is always sorted.
+- The left half gradually gets built up each iteration, one more added.
+- Take the iterator, insert into the sorted array to left of it, continue. Repeat.
+- Compare the iterator to each item in the sorted array, starting from end
+
+Example:
+
+- Start by picking the second element in the array
+- Now compare the second element with the one before it and swap if necessary
+- Continue to the next element, and if it is in the incorrect order, iterate through the sorted portion (i.e. the left side) to place the element in the correct place.
+- Repeat until the array is sorted.
+
+```js
+// see snippets/sortInsertion.js
+
+function insertionSort() {}
+```
+
+Insertion sort can work maybe if we're polling new data and need to insert items a la carte into an already sorted list. It can be efficient because we are working with an already sorted array and need to insert it into a spot quickly.
+
+## Comparisons
+
+- All are `O(1)` space complexity.
+- All are `O(n^2)` time complexity on average and in the worst case.
+
+They differ in their best case scenario:
+
+- Bubble Sort - `O(n)`
+- Insertion Sort - `O(n)`
+- Selection Sort - `O(n^2)`
