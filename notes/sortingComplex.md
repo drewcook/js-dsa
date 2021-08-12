@@ -151,8 +151,10 @@ In order to implement radix sort, it's helpful to build a few helper functions f
   ```
 
 ### Radix Sort Big O Notation
+
 `n` is number of integers in array
 `k` is longest number of digits in any given integer
+
 - Best Time Complexity - `O(n*k)`
 - Average Time Complexity - `O(n*k)`
 - Worst Time Complexity - `O(n*k)`

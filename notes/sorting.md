@@ -45,7 +45,6 @@ The built in `Array.sort()` method in JavaScript doesn't always behave the way w
 
 ```js
 ;['Banana', 'Coke', 'Apple'].sort() // ["Apple", "Banana", "Coke"]
-
 ;[6, 4, 15, 10].sort() // [10, 15, 4, 6]
 ```
 
@@ -67,7 +66,6 @@ function compareByLen(str1, str2) {
 }
 
 ;[6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
-
 ;['dd', 'd', 'ddd'].sort(compareByLen) // ['d', 'dd', 'ddd']
 ```
 
