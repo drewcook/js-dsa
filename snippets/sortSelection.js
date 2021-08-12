@@ -9,22 +9,22 @@
   - Repeat this with the next element until the array is sorted. Start from the next item after the swap.
 */
 
-import swap from "./swap";
+import swap from './swap'
 
 // Not terribly efficient - O(n^2) time complexity
 function selectionSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let min = i;
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[min]) {
-        min = j;
-      }
-    }
-    if (min !== i) {
-      swap(arr, min, i);
-    }
-  }
-  return arr;
+	for (let i = 0; i < arr.length; i++) {
+		let min = i
+		for (let j = i + 1; j < arr.length; j++) {
+			if (arr[j] < arr[min]) {
+				min = j
+			}
+		}
+		if (min !== i) {
+			swap(arr, min, i)
+		}
+	}
+	return arr
 }
 
-console.log(selectionSort([4, 29, 9, 94, 2, 59, 53]));
+console.log(selectionSort([4, 29, 9, 94, 2, 59, 53]))

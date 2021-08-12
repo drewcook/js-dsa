@@ -1,33 +1,33 @@
 // Recursion
 // Helper Method Recursion Version
 function collectStrings(obj) {
-  var stringsArr = [];
+	var stringsArr = []
 
-  function gatherStrings(o) {
-    for (var key in o) {
-      if (typeof o[key] === "string") {
-        stringsArr.push(o[key]);
-      } else if (typeof o[key] === "object") {
-        return gatherStrings(o[key]);
-      }
-    }
-  }
+	function gatherStrings(o) {
+		for (var key in o) {
+			if (typeof o[key] === 'string') {
+				stringsArr.push(o[key])
+			} else if (typeof o[key] === 'object') {
+				return gatherStrings(o[key])
+			}
+		}
+	}
 
-  gatherStrings(obj);
+	gatherStrings(obj)
 
-  return stringsArr;
+	return stringsArr
 }
 
 //Pure Recursion Version
 function collectStrings(obj) {
-  var stringsArr = [];
-  for (var key in obj) {
-    if (typeof obj[key] === "string") {
-      stringsArr.push(obj[key]);
-    } else if (typeof obj[key] === "object") {
-      stringsArr = stringsArr.concat(collectStrings(obj[key]));
-    }
-  }
+	var stringsArr = []
+	for (var key in obj) {
+		if (typeof obj[key] === 'string') {
+			stringsArr.push(obj[key])
+		} else if (typeof obj[key] === 'object') {
+			stringsArr = stringsArr.concat(collectStrings(obj[key]))
+		}
+	}
 
-  return stringsArr;
+	return stringsArr
 }

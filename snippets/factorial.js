@@ -5,20 +5,20 @@
 
 // iteravely
 function factorial(num) {
-  let total = 0;
-  for (let i = num; i > 0; i--) {
-    total += i;
-  }
-  return total;
+	let total = 0
+	for (let i = num; i > 0; i--) {
+		total += i
+	}
+	return total
 }
 
 // recusrively
 function factorial(num) {
-  if (num === 1) return num;
-  return num * factorial(num - 1);
+	if (num === 1) return num
+	return num * factorial(num - 1)
 }
 
-console.log(factorial(1)); // 1
-console.log(factorial(3)); // 6
-console.log(factorial(5)); // 120
-console.log(factorial(10)); // 3,628,800
+console.log(factorial(1)) // 1
+console.log(factorial(3)) // 6
+console.log(factorial(5)) // 120
+console.log(factorial(10)) // 3,628,800

@@ -9,10 +9,10 @@ Recursion is used all the time in programming. It is sometimes a cleaner alterna
 ```js
 // Examples
 
-JSON.parse();
-JSON.stringify();
-document.getElementById(); // and other DOM traversal algorithms
-object.nested.property; // Object traversal
+JSON.parse()
+JSON.stringify()
+document.getElementById() // and other DOM traversal algorithms
+object.nested.property // Object traversal
 // and more complex data structures, like stacks
 ```
 
@@ -31,18 +31,18 @@ Counting down from 5 until we get to zero, then we stop.
 
 ```js
 function countDown(num) {
-  // base case
-  if (num <= 0) {
-    console.log("All done!");
-    return; // <- this is important to return, or use an else block
-  }
-  // recursive case
-  console.log(num);
-  num--;
-  countDown(num);
+	// base case
+	if (num <= 0) {
+		console.log('All done!')
+		return // <- this is important to return, or use an else block
+	}
+	// recursive case
+	console.log(num)
+	num--
+	countDown(num)
 }
 
-countDown(5);
+countDown(5)
 
 // Result:
 // 5
@@ -71,16 +71,16 @@ In some cases, we can put a helper method within another function that is recurs
 
 ```js
 function outer(input) {
-  var outerScopedVariable = [];
+	var outerScopedVariable = []
 
-  function helper(helperInput) {
-    // modify the outerScopedVariable
-    helper(helperInput--);
-  }
+	function helper(helperInput) {
+		// modify the outerScopedVariable
+		helper(helperInput--)
+	}
 
-  helper(input);
+	helper(input)
 
-  return outerScopedVariable;
+	return outerScopedVariable
 }
 ```
 

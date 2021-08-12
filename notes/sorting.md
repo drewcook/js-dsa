@@ -15,10 +15,10 @@ Individual characters in a sentence for example, linked listed, trees, etc can a
 
 ```js
 function sort(arr) {
-  return arr;
+	return arr
 }
 
-sort([23, 45, 6, 12, 13]); // [6, 12, 13, 23, 45]
+sort([23, 45, 6, 12, 13]) // [6, 12, 13, 23, 45]
 ```
 
 There are at least over 15 named sorting algorithms.
@@ -44,9 +44,9 @@ These are simple, but important to know before using more complex algorithms.
 The built in `Array.sort()` method in JavaScript doesn't always behave the way we want it to.
 
 ```js
-["Banana", "Coke", "Apple"].sort(); // ["Apple", "Banana", "Coke"]
+;['Banana', 'Coke', 'Apple'].sort() // ["Apple", "Banana", "Coke"]
 
-[6, 4, 15, 10].sort(); // [10, 15, 4, 6]
+;[6, 4, 15, 10].sort() // [10, 15, 4, 6]
 ```
 
 But we can tell JS how to sort. We can use the optional compare function argument to do this.
@@ -59,16 +59,16 @@ The _comparator_ looks at pairs of elements (_a_ and _b_) and determines their s
 
 ```js
 function numberCompare(num1, num2) {
-  return num1 - num2;
+	return num1 - num2
 }
 
 function compareByLen(str1, str2) {
-  return str1.length - str2.length;
+	return str1.length - str2.length
 }
 
-[6, 4, 15, 10].sort(numberCompare); // [4, 6, 10, 15]
+;[6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
 
-["dd", "d", "ddd"].sort(compareByLen); // ['d', 'dd', 'ddd']
+;['dd', 'd', 'ddd'].sort(compareByLen) // ['d', 'dd', 'ddd']
 ```
 
 ## Bubble Sort
@@ -88,15 +88,15 @@ Many sorting algorithms involve some type of swapping functionality. It's helpfu
 ```js
 // ES5
 function swap(arr, idx1, idx2) {
-  let temp = arr[idx1];
-  arr[idx1] = arr[idx2];
-  arr[idx2] = temp;
+	let temp = arr[idx1]
+	arr[idx1] = arr[idx2]
+	arr[idx2] = temp
 }
 
 // ES6
 const swap = (arr, idx1, idx2) => {
-  [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
-};
+	;[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+}
 ```
 
 ## Selection Sort
@@ -115,18 +115,18 @@ Not terribly efficient - `O(n^2)` time complexity
 // see snippets/sortSelection.js
 
 function selectionSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let min = i;
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[min]) {
-        min = j;
-      }
-    }
-    if (min !== i) {
-      swap(arr, min, i);
-    }
-  }
-  return arr;
+	for (let i = 0; i < arr.length; i++) {
+		let min = i
+		for (let j = i + 1; j < arr.length; j++) {
+			if (arr[j] < arr[min]) {
+				min = j
+			}
+		}
+		if (min !== i) {
+			swap(arr, min, i)
+		}
+	}
+	return arr
 }
 ```
 

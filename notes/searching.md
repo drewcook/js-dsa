@@ -10,10 +10,10 @@ JavaScript has some built in methods that implement searching algorithms. These 
 ```js
 // Linear searching methods
 
-Array.includes();
-Array.indexOf();
-Array.find();
-Array.findIndex();
+Array.includes()
+Array.indexOf()
+Array.find()
+Array.findIndex()
 ```
 
 ## Linear Search
@@ -26,20 +26,20 @@ Write a function that accepts an array and a value. Loop through entire array an
 ```js
 // This is basically an .indexOf() implementation, see snippets/searchLinear.js
 
-const array = [5, 8, 1, 100, 12, 3, 12];
+const array = [5, 8, 1, 100, 12, 3, 12]
 
 function linearSearch(arr, value) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === value) {
-      return i;
-    }
-  }
-  return -1;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === value) {
+			return i
+		}
+	}
+	return -1
 }
 
-linearSearch(array, 100); // 3
-linearSearch(array, 3); // 5
-linearSearch(array, 54); // -1
+linearSearch(array, 100) // 3
+linearSearch(array, 3) // 5
+linearSearch(array, 54) // -1
 ```
 
 ## Binary Search
@@ -52,21 +52,21 @@ _The data set must be sorted prior to implementing a binary search._
 // see snippets/searchBinary.js
 
 function binarySearch(arr, value) {
-  let start = 0;
-  let end = arr.length - 1;
-  let middle = Math.floor((start + end) / 2);
+	let start = 0
+	let end = arr.length - 1
+	let middle = Math.floor((start + end) / 2)
 
-  while (arr[middle] !== value && start <= end) {
-    if (arr[middle] > value) end = middle - 1;
-    else start = middle + 1;
-    middle = Math.floor((start + end) / 2);
-  }
+	while (arr[middle] !== value && start <= end) {
+		if (arr[middle] > value) end = middle - 1
+		else start = middle + 1
+		middle = Math.floor((start + end) / 2)
+	}
 
-  return arr[middle] === value ? middle : -1;
+	return arr[middle] === value ? middle : -1
 }
 
-binarySearch([1, 2, 3, 4, 99], 99); // 4
-binarySearch([1, 2, 3, 4, 99], 50); // -1
+binarySearch([1, 2, 3, 4, 99], 99) // 4
+binarySearch([1, 2, 3, 4, 99], 50) // -1
 ```
 
 ## Naive String Search
@@ -76,8 +76,8 @@ There isn't really a name for this, but how would we search for a substring with
 JavaScript has some built in methods for searching for single characters as well as substrings.
 
 ```js
-String.charAt();
-String.substr();
+String.charAt()
+String.substr()
 ```
 
 Example:
@@ -87,11 +87,11 @@ Write a function that takes a larger string and a substring to search for within
 // see snippiets/searchStringNaive.js
 
 function stringSearch(string, pattern) {
-  // loop over longer string
-  // loop over shorter string
-  // if characters don't match, break out of inner loop
-  // if they do match, keep going
-  // if you complete the inner loop and find a match, increment the count of matches
-  // return the count
+	// loop over longer string
+	// loop over shorter string
+	// if characters don't match, break out of inner loop
+	// if they do match, keep going
+	// if you complete the inner loop and find a match, increment the count of matches
+	// return the count
 }
 ```

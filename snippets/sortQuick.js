@@ -19,28 +19,28 @@
   - Return the pivot index
 */
 
-import swap from "./swap";
+import swap from './swap'
 
 // Visualization videos are helpful to show how we formulate the smaller values, and how we place the pivot after them
 function pivotHelper(arr, startIdx = 0, endIdx = arr.length) {
-  // We're assuming pivot is always the first element
-  let pivotElement = arr[startIdx];
-  let swapIdx = startIdx;
+	// We're assuming pivot is always the first element
+	let pivotElement = arr[startIdx]
+	let swapIdx = startIdx
 
-  for (let i = startIdx + 1; i < endIdx; i++) {
-    const element = arr[i];
-    if (pivotElement > element) {
-      // keep track of every lower value
-      swapIdx++;
-      // swap the lower values with the higher ones
-      swap(arr, swapIdx, i);
-    }
-  }
+	for (let i = startIdx + 1; i < endIdx; i++) {
+		const element = arr[i]
+		if (pivotElement > element) {
+			// keep track of every lower value
+			swapIdx++
+			// swap the lower values with the higher ones
+			swap(arr, swapIdx, i)
+		}
+	}
 
-  // swap the pivot from the start to the swap point
-  swap(arr, startIdx, swapIdx);
+	// swap the pivot from the start to the swap point
+	swap(arr, startIdx, swapIdx)
 
-  return swapIdx;
+	return swapIdx
 }
 
 // Call helper on full array, which will place an initial pivot using the first element
@@ -55,33 +55,33 @@ function pivotHelper(arr, startIdx = 0, endIdx = arr.length) {
  * @param  {any[]} right - the subarray to the right of the pivot element
  */
 function quickSort(arr, left = 0, right = arr.length) {
-  // if left === right, we are looking at one element
-  // left and right will start big, and become closer together as we iterate
-  if (left < right) {
-    let pivotIdx = pivotHelper(arr, left, right);
+	// if left === right, we are looking at one element
+	// left and right will start big, and become closer together as we iterate
+	if (left < right) {
+		let pivotIdx = pivotHelper(arr, left, right)
 
-    // left side
-    quickSort(arr, left, pivotIdx - 1);
-    // right side
-    quickSort(arr, pivotIdx + 1, right);
-  }
+		// left side
+		quickSort(arr, left, pivotIdx - 1)
+		// right side
+		quickSort(arr, pivotIdx + 1, right)
+	}
 
-  return arr;
+	return arr
 }
 
-const data = [5, 2, 1, 8, 4, 7, 6, 3];
-console.log(quickSort(data)); // [1, 2, 3, 4, 5, 6, 7, 8]
+const data = [5, 2, 1, 8, 4, 7, 6, 3]
+console.log(quickSort(data)) // [1, 2, 3, 4, 5, 6, 7, 8]
 
 // Now try sorting a large array
 function createArray(n) {
-  let arr = [];
+	let arr = []
 
-  for (let i = 0; i < n; i++) {
-    arr.push(Math.floor(Math.random() * 1000));
-  }
+	for (let i = 0; i < n; i++) {
+		arr.push(Math.floor(Math.random() * 1000))
+	}
 
-  return arr;
+	return arr
 }
 
-const big = createArray(100);
-console.log(quickSort(big));
+const big = createArray(100)
+console.log(quickSort(big))

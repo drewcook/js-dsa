@@ -71,9 +71,9 @@ Write a function called **same** which accepts two arrays. The function should r
 ```js
 // see snippets/same.js
 
-same([1, 2, 3], [4, 1, 9]); // true
-same([1, 2, 3], [1, 9]); // false
-same([1, 2, 1], [4, 4, 1]); // false (must be same frequency)
+same([1, 2, 3], [4, 1, 9]) // true
+same([1, 2, 3], [1, 9]) // false
+same([1, 2, 1], [4, 4, 1]) // false (must be same frequency)
 ```
 
 ##### Multiple Pointers
@@ -88,9 +88,9 @@ Write a function called **sumZero** which accepts a **sorted** array of integers
 ```js
 // see snippets/sumZero.js
 
-sumZero([-3, -2, -1, 0, 1, 2, 3]); // [-3,3]
-sumZero([-2, 0, 1, 3]); // undefined
-sumZero([1, 2, 3]); // undefined
+sumZero([-3, -2, -1, 0, 1, 2, 3]) // [-3,3]
+sumZero([-2, 0, 1, 3]) // undefined
+sumZero([1, 2, 3]) // undefined
 ```
 
 ##### Sliding Window
@@ -105,7 +105,7 @@ Example:
 Find the longest sequence of unique characters in a string.
 
 ```js
-longestUniqueSequence("hellothere"); // lother
+longestUniqueSequence('hellothere') // lother
 ```
 
 Or, find max sum of n consecutive elements in an array.
@@ -113,8 +113,8 @@ Or, find max sum of n consecutive elements in an array.
 ```js
 // see snippets/maxSubArraySum.js
 
-maxSubArraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10, 8+2
-maxSubArraySum([4, 2, 1, 6], 1); // 6
+maxSubArraySum([1, 2, 5, 2, 8, 1, 5], 2) // 10, 8+2
+maxSubArraySum([4, 2, 1, 6], 1) // 6
 ```
 
 ##### Divide and Conquer
@@ -129,7 +129,7 @@ Given a **sorted** array of integers, write a function callsed search, that acce
 ```js
 // see snippets/search.js
 
-search([1, 2, 3, 4, 5, 6], 4); // 3
-search([1, 2, 3, 4, 5, 6], 6); // 5
-search([1, 2, 3, 4, 5, 6], 11); // -1
+search([1, 2, 3, 4, 5, 6], 4) // 3
+search([1, 2, 3, 4, 5, 6], 6) // 5
+search([1, 2, 3, 4, 5, 6], 11) // -1
 ```

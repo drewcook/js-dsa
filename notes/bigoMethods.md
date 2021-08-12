@@ -22,12 +22,12 @@ Searching - O(n)
 Access - O(1)
 
 ```js
-obj.keys(); // O(n)
-obj.values(); // O(n)
-obj.entries(); // O(n)
-obj.hasOwnProperty(); // O(1)
-obj.value; // O(1)
-obj.value = x; // O(1)
+obj.keys() // O(n)
+obj.values() // O(n)
+obj.entries() // O(n)
+obj.hasOwnProperty() // O(1)
+obj.value // O(1)
+obj.value = x // O(1)
 ```
 
 ## Arrays
@@ -37,18 +37,18 @@ Use arrays when order matters. And in general, add and remove from the end of th
 In general, a lot of working with arrays are of O(n) time, or linear time complexity.
 
 ```js
-arr[i]; // O(1)
-arr.push(); // O(1)
-arr.pop(); // O(1)
-arr.shift(); // O(n)
-arr.unshift(); // O(n)
-arr.concat(); // O(n)
-arr.slice(); // O(n)
-arr.splice(); // O(n)
-arr.forEach(); // O(n)
-arr.map(); // O(n)
-arr.filter(); // O(n)
-arr.reduce(); // O(n)
-arr.find(); // O(n)
-arr.sort(); // O(n*logn)
+arr[i] // O(1)
+arr.push() // O(1)
+arr.pop() // O(1)
+arr.shift() // O(n)
+arr.unshift() // O(n)
+arr.concat() // O(n)
+arr.slice() // O(n)
+arr.splice() // O(n)
+arr.forEach() // O(n)
+arr.map() // O(n)
+arr.filter() // O(n)
+arr.reduce() // O(n)
+arr.find() // O(n)
+arr.sort() // O(n*logn)
 ```
