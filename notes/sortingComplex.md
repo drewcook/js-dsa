@@ -149,3 +149,13 @@ In order to implement radix sort, it's helpful to build a few helper functions f
   // max on each iteration: 1, 3, 3, 8, 8
   // returns 8
   ```
+
+### Radix Sort Big O Notation
+`n` is number of integers in array
+`k` is longest number of digits in any given integer
+- Best Time Complexity - `O(n*k)`
+- Average Time Complexity - `O(n*k)`
+- Worst Time Complexity - `O(n*k)`
+- Space Complexity - `O(n+k)`
+
+Long digits are definitely something to consider (`k`), as it will impact the number of times the outer loop will run. If dealing with all unique data, then `n` becomes `logn`, which is equivalent to merge/quick sort as well with `O(n*logn)`.

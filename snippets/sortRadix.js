@@ -36,12 +36,14 @@ function radixSort(nums) {
 		let digitBuckets = Array.from({ length: 10 }, () => [])
 
 		for (let i = 0; i < nums.length; i++) {
-			const digit = getDigit(nums[i], k)
+			let digit = getDigit(nums[i], k)
 			digitBuckets[digit].push(nums[i])
 		}
-
-		console.log(digitBuckets)
+		nums = [].concat(...digitBuckets)
 	}
+
+	return nums
 }
 
-radixSort([2, 49, 30429, 4902, 92, 39, 93, 9])
+const arr = [2, 48, 344291, 4902, 92, 35, 93, 4]
+console.log(radixSort(arr))
