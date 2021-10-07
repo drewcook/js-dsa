@@ -1,4 +1,5 @@
 const util = require('util')
+const { Queue } = require('./Queue')
 
 // Nodes will have a value, left and right properties
 class Node {
@@ -67,6 +68,74 @@ class BinarySearchTree {
 			} else return curr // equal to curr.value, found it
 		}
 	}
+
+	/**
+	 * Breadth-first search over every node in the tree, using a queue.
+	 * @returns {val[]} - An array of the node values in BFS order
+	 */
+	BFS() {
+		// work with a queue
+		const queue = new Queue()
+		let visited = []
+		// enqueue the root
+		queue.enqueue(this.root)
+		// loop through queue and find if there are children for each item, add to visited
+		while (queue.size > 0) {
+			const node = queue.dequeue()
+			visited.push(node.value)
+			if (node.left) queue.enqueue(node.left)
+			if (node.right) queue.enqueue(node.right)
+		}
+		return visited
+	}
+
+	/**
+	 * Depth-first search over every node in the tree, using the preorder approach with recursion.
+	 * @params {Node} startingNode - An optional node to start from, otherwise start at root.
+	 * @returns {val[]} - An array of the node values in DFS preorder
+	 */
+	DFSPreOrder(startingNode = null) {
+		let visited = []
+		function traverse(node) {
+			visited.push(node.value)
+			if (node.left) traverse(node.left)
+			if (node.right) traverse(node.right)
+		}
+		traverse(startingNode || this.root)
+		return visited
+	}
+
+	/**
+	 * Depth-first search over every node in the tree, using the postorder approach with recursion.
+	 * @params {Node} startingNode - An optional node to start from, otherwise start at root.
+	 * @returns {val[]} - An array of the node values in DFS preorder
+	 */
+	DFSPostOrder(startingNode = null) {
+		let visited = []
+		function traverse(node) {
+			if (node.left) traverse(node.left)
+			if (node.right) traverse(node.right)
+			visited.push(node.value)
+		}
+		traverse(startingNode || this.root)
+		return visited
+	}
+
+	/**
+	 * Depth-first search over every node in the tree, using the inorder approach with recursion.
+	 * @params {Node} startingNode - An optional node to start from, otherwise start at root.
+	 * @returns {val[]} - An array of the node values in DFS preorder
+	 */
+	DFSInOrder(startingNode = null) {
+		let visited = []
+		function traverse(node) {
+			if (node.left) traverse(node.left)
+			visited.push(node.value)
+			if (node.right) traverse(node.right)
+		}
+		traverse(startingNode || this.root)
+		return visited
+	}
 }
 
 // Naive approach
@@ -88,11 +157,37 @@ tree.insert(7)
 tree.insert(3)
 tree.insert(13)
 console.log(util.inspect(tree, { depth: null }))
-let found = tree.find(7)
-console.log({ found })
-found = tree.find(110)
-console.log({ found })
-found = tree.find(null)
-console.log({ found })
-found = tree.find(5)
-console.log({ found })
+/*======================
+				 10
+			/	  	 \
+		5		 			13
+	/  \		 	 /   \
+ 2		7	 	 11	    16
+	\
+	 3
+========================*/
+
+// let found = tree.find(7)
+// console.log({ found })
+// found = tree.find(110)
+// console.log({ found })
+// found = tree.find(null)
+// console.log({ found })
+// found = tree.find(5)
+// console.log({ found })
+
+// Breadth-First Search
+// Expect: [10, 5, 13, 2, 7, 11, 16, 3]
+const bfsResult = tree.BFS()
+console.log('BFS:', util.inspect(bfsResult, { depth: null }))
+
+// Depth-First Search
+// PreOrder expect: [10, 5, 2, 3, 7, 13, 11, 16]
+let dfsResult = tree.DFSPreOrder()
+console.log('DFSPreOrder:', util.inspect(dfsResult, { depth: null }))
+// PostOrder expect: [3, 2, 7, 5, 11, 16, 13, 10]
+dfsResult = tree.DFSPostOrder()
+console.log('DFSPostOrder:', util.inspect(dfsResult, { depth: null }))
+// InOrder expect: [2, 3, 5, 7, 10, 11, 13, 16]
+dfsResult = tree.DFSInOrder()
+console.log('DFSInOrder:', util.inspect(dfsResult, { depth: null }))

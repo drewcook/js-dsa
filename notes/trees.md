@@ -22,7 +22,7 @@ _Trees are non-linear_, and there can be many paths that can be taken, depending
 
 Trees are similar to linked lists in that they consist of nodes that have a pointer to another node in the data structure. However, they differ in that nodes within a tree can point to multiple children nodes, whereas nodes in a linked list can only point to one other node. In the case of a doubly-linked list, a node can point to two nodes, but only one per direction.
 
-Trees are unidirectional, but branch out. The graph above illustrates this. A node can point to multiple other children nodes, and those child nodes can also point to their own children nodes.  However, a child node cannot point back to its own parent node. __Parent -> Child__
+Trees are unidirectional, but branch out. The graph above illustrates this. A node can point to multiple other children nodes, and those child nodes can also point to their own children nodes. However, a child node cannot point back to its own parent node. __Parent -> Child__
 
 __A tree will only have one root node.__
 

@@ -83,18 +83,23 @@ q.enqueue(20)
 q.enqueue(30)
 q.enqueue(40)
 q.enqueue(50)
-console.log(q)
-const r1 = q.dequeue()
-console.log({ r1, q })
-const r2 = q.dequeue()
-console.log({ r2, q })
-const r3 = q.dequeue()
-console.log({ r3, q })
-const r4 = q.dequeue()
-console.log({ r4, q })
-const r5 = q.dequeue()
-console.log({ r5, q })
-const r6 = q.dequeue()
-console.log({ r6, q })
+// console.log(q)
+// const r1 = q.dequeue()
+// console.log({ r1, q })
+// const r2 = q.dequeue()
+// console.log({ r2, q })
+// const r3 = q.dequeue()
+// console.log({ r3, q })
+// const r4 = q.dequeue()
+// console.log({ r4, q })
+// const r5 = q.dequeue()
+// console.log({ r5, q })
+// const r6 = q.dequeue()
+// console.log({ r6, q })
 
 // FIFO, no indexing, can grow as large as it needs, but always will be constant time O(1) to enqueue and dequeue items
+
+module.exports = {
+	Node,
+	Queue,
+}
