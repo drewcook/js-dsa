@@ -44,7 +44,7 @@ merge(arg1, arg2)
 merge([100], [1, 2, 3, 4, 5])
 
 /*
-- Break up array into halves until yo uhave arrays that are empty or have one element
+- Break up array into halves until you have arrays that are empty or have one element
 - Keep recursivly calling this break up until base case is arr.length <= 1
 - We use array.slice() recursively
 - Once we have the small arrays, we merge them back together using our merge helper function
