@@ -7,7 +7,7 @@
 - These algorithms will be much faster than the simpler sorting algorithms.
 - These are a family of sorting algorithms that can improve time complexity from `OIn^2)` to `O(logn)`
 - There's a tradeoff between efficiency and simplicity
-- The more efficient algorithmss are much less simple, and generally take longer to understand
+- The more efficient algorithms are much less simple, and generally take longer to understand
 
 ## Merge Sort
 
@@ -22,7 +22,7 @@ Example:
 // snippets/sortMerge.js
 
 function mergeSort() {
-	return arr
+ return arr
 }
 ```
 
@@ -50,7 +50,7 @@ Example:
 // see snippets/sortQuick.js for pseudocode and implementation
 
 function quickSort(arr) {
-	return arr
+ return arr
 }
 ```
 
@@ -97,7 +97,7 @@ In order to implement radix sort, it's helpful to build a few helper functions f
 
   ```js
   function getDigit(num, i) {
-  	return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
+   return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
   }
 
   getDigit(7273, 2)
@@ -116,8 +116,8 @@ In order to implement radix sort, it's helpful to build a few helper functions f
 
   ```js
   function digitCount(num) {
-  	if (num === 0) return 1
-  	return Math.floor(Math.log10(Math.abs(num))) + 1
+   if (num === 0) return 1
+   return Math.floor(Math.log10(Math.abs(num))) + 1
   }
 
   digitCount(423)
@@ -138,11 +138,11 @@ In order to implement radix sort, it's helpful to build a few helper functions f
 
   ```js
   function mostDigits(nums) {
-  	let max = 0
-  	for (let i = 0; i < nums.length; i++) {
-  		max = Math.max(max, digitCount(nums[i]))
-  	}
-  	return max
+   let max = 0
+   for (let i = 0; i < nums.length; i++) {
+    max = Math.max(max, digitCount(nums[i]))
+   }
+   return max
   }
 
   mostDigits([3, 567, 39, 20932093, 2])

@@ -6,7 +6,7 @@ We will end up with branches that connect nodes to other nodes, splitting from t
 
 A node can contain anything, strings, numbers, but can store whatever they need to.
 
-```
+```md
      o  <-root
     /  \
   o      o <- parent, child of root
@@ -79,7 +79,7 @@ Check out `/data-structures/snippets/BinarySearchTree.js` for a BST class implem
 - Insertion - O(log n)
 - Searching - O(log n)
 
-Inserting and searcing a BST is logarithmic time, because with each iteration over each node, we cut the number of items to travers through in half. Hence the name, binary!
+Inserting and searching a BST is logarithmic time, because with each iteration over each node, we cut the number of items to traverse through in half. Hence the name, binary!
 
 _However, these times are not guaranteed.__
 

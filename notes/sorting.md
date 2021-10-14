@@ -15,7 +15,7 @@ Individual characters in a sentence for example, linked listed, trees, etc can a
 
 ```js
 function sort(arr) {
-	return arr
+ return arr
 }
 
 sort([23, 45, 6, 12, 13]) // [6, 12, 13, 23, 45]
@@ -58,11 +58,11 @@ The _comparator_ looks at pairs of elements (_a_ and _b_) and determines their s
 
 ```js
 function numberCompare(num1, num2) {
-	return num1 - num2
+ return num1 - num2
 }
 
 function compareByLen(str1, str2) {
-	return str1.length - str2.length
+ return str1.length - str2.length
 }
 
 ;[6, 4, 15, 10].sort(numberCompare) // [4, 6, 10, 15]
@@ -81,19 +81,19 @@ As each pass happens, the largest item gets pushed to the end. This results in l
 
 ### Swapping
 
-Many sorting algorithms involve some type of swapping functionality. It's helpful to define it as a separate funciton to make the bubble sort code cleaner.
+Many sorting algorithms involve some type of swapping functionality. It's helpful to define it as a separate function to make the bubble sort code cleaner.
 
 ```js
 // ES5
 function swap(arr, idx1, idx2) {
-	let temp = arr[idx1]
-	arr[idx1] = arr[idx2]
-	arr[idx2] = temp
+ let temp = arr[idx1]
+ arr[idx1] = arr[idx2]
+ arr[idx2] = temp
 }
 
 // ES6
 const swap = (arr, idx1, idx2) => {
-	;[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+ ;[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
 }
 ```
 
@@ -113,18 +113,18 @@ Not terribly efficient - `O(n^2)` time complexity
 // see snippets/sortSelection.js
 
 function selectionSort(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		let min = i
-		for (let j = i + 1; j < arr.length; j++) {
-			if (arr[j] < arr[min]) {
-				min = j
-			}
-		}
-		if (min !== i) {
-			swap(arr, min, i)
-		}
-	}
-	return arr
+ for (let i = 0; i < arr.length; i++) {
+  let min = i
+  for (let j = i + 1; j < arr.length; j++) {
+   if (arr[j] < arr[min]) {
+    min = j
+   }
+  }
+  if (min !== i) {
+   swap(arr, min, i)
+  }
+ }
+ return arr
 }
 ```
 

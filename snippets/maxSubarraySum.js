@@ -9,7 +9,7 @@
 // new window compares to prev window, takes the highest sum
 
 // naive solution
-// O(n^2) tiem complexity
+// O(n^2) time complexity
 function maxSubArraySum(arr, n) {
 	if (n > arr.length) {
 		return null

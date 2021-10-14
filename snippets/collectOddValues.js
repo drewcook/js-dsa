@@ -2,7 +2,7 @@
   Write a function that collects all odd values in an array.
 */
 
-// recursioun helper method
+// recursion helper method
 function collectOddValues(arr) {
 	let result = []
 
@@ -17,7 +17,7 @@ function collectOddValues(arr) {
 			result.push(helperInput[0])
 		}
 
-		// resursion - shorten array by one and check again
+		// recursion - shorten array by one and check again
 		helper(helperInput.slice(1))
 	}
 

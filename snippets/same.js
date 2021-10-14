@@ -3,7 +3,7 @@
 /*
   Usually use an object to count frequencies, breaking down an array or string of linear objects,
   and quickly compare that breakdown to another object, that was constructed in the same way.
-  Loop over separately, construct ojbects, compare those objects.
+  Loop over separately, construct objects, compare those objects.
 */
 
 // naive solution - O(n^2)

@@ -3,7 +3,7 @@
 
 // we can use recursion to write a factorial function to find the value of n factorial
 
-// iteravely
+// iteratively
 function factorial(num) {
 	let total = 0
 	for (let i = num; i > 0; i--) {
@@ -12,7 +12,7 @@ function factorial(num) {
 	return total
 }
 
-// recusrively
+// recursively
 function factorial(num) {
 	if (num === 1) return num
 	return num * factorial(num - 1)

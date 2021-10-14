@@ -15,7 +15,7 @@ function swap(arr, idx1, idx2) {
 	arr[idx2] = temp
 }
 
-// unoptimized version - too many comparisons, and recomparing same values
+// un-optimized version - too many comparisons, and re-comparing same values
 function bubbleSort(arr) {
 	for (let i = 0; i < arr.length; i++) {
 		for (let j = 0; j < arr.length; j++) {

@@ -124,7 +124,7 @@ This pattern involves dividing a dataset into smaller chunks and then repeating 
 Quick sort and merge sort are two sorting algorithms that employ a divide and conquer strategy. Binary search and binary search trees also use divide and conquer.
 
 Example:
-Given a **sorted** array of integers, write a function callsed search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1.
+Given a **sorted** array of integers, write a function called search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1.
 
 ```js
 // see snippets/search.js

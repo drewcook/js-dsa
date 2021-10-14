@@ -10,7 +10,7 @@ queue.shift() // 'SECOND'
 queue.shift() // 'THIRD'
 // Array (adding to beginning and removing at end)
 queue = []
-// enqueing items
+// enqueueing items
 queue.unshift('FIRST')
 queue.unshift('SECOND')
 queue.unshift('THIRD')
@@ -19,8 +19,8 @@ queue.pop() // 'FIRST'
 queue.pop() // 'SECOND'
 queue.pop() // 'THIRD'
 
-// Arrays have to reindex each time adding or removing from beginning, because things will need to be shifted over (FIFO)
-// This differs from array stacks, because push() and pop() don't reindex since they are at the end (LIFO)
+// Arrays have to re-index each time adding or removing from beginning, because things will need to be shifted over (FIFO)
+// This differs from array stacks, because push() and pop() don't re-index since they are at the end (LIFO)
 // A better performant implementation would be a linked list
 
 // Adding to beginning (head) and remove from end (tail) - much slower, because removing from end takes O(n)

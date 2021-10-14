@@ -122,7 +122,7 @@ class BinarySearchTree {
 	}
 
 	/**
-	 * Depth-first search over every node in the tree, using the inorder approach with recursion.
+	 * Depth-first search over every node in the tree, using the InOrder approach with recursion.
 	 * @params {Node} startingNode - An optional node to start from, otherwise start at root.
 	 * @returns {val[]} - An array of the node values in DFS preorder
 	 */

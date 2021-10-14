@@ -82,7 +82,7 @@ What if we have a child node and want to find its parent? **The rule**: For any 
 
 When removing a node from a MaxBinaryHeap, we are usually set to remove the largest value from the heap.  In a MaxBinaryHeap, it will be the head.  Removing from a MinBinaryHeap has the opposite rule, where we will usually remove the smallest value in the heap.  It will be the head as well in a MinBinaryHeap.
 
-> "The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called "down-heap" (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascasde-down, and extract-min/max)."
+> "The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called "down-heap" (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max)."
 >
 > -Wikipedia
 

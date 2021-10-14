@@ -4,7 +4,7 @@
   - While there are still values we haven't looked at...
     - If the value in the first array is smaller than the value in the second array, push the value in the first array into ur results andmove onto the next value in the first array
     - If the value in the first array is larger than the value in the second array, push the value in the second array into our results and move onto the next value in the second array
-    - Once we exhause one array, push in all the remaining values from the other array
+    - Once we exhaust one array, push in all the remaining values from the other array
 
 */
 
@@ -45,7 +45,7 @@ merge([100], [1, 2, 3, 4, 5])
 
 /*
 - Break up array into halves until you have arrays that are empty or have one element
-- Keep recursivly calling this break up until base case is arr.length <= 1
+- Keep recursively calling this break up until base case is arr.length <= 1
 - We use array.slice() recursively
 - Once we have the small arrays, we merge them back together using our merge helper function
 - Once all are merged, we return the merged array

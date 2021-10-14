@@ -28,7 +28,7 @@ Because we have to, at minimum, keep track of two fields (next and prev) for eac
 
 There is no index to access things, in contrast to arrays. To find a node at a particular index, you'll have to start from the beginning (head) of the list, and iterate over each node until it is found. This means getting/searching in a linked list will take O(n) time. However, inserting and deleting are only O(1) time, and make this data structure much faster than arrays for these operations.
 
-Linked lists are stored differently in memory than an array. An array needs a memory block the same size or larger of the lenght of the array. A linked list only needs one memory block for each node. Since each node will have a reference to another node, there only needs enough memory for the exact amount of nodes in the list.
+Linked lists are stored differently in memory than an array. An array needs a memory block the same size or larger of the length of the array. A linked list only needs one memory block for each node. Since each node will have a reference to another node, there only needs enough memory for the exact amount of nodes in the list.
 
 Lists:
 

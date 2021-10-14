@@ -1,6 +1,6 @@
 # Stacks
 
-Stacks are a type of data structure that is used often in programming. They are an abstract data structure of a collection of data that follows one prirmary rule. It adheres to last in, first out. (LIFO)
+Stacks are a type of data structure that is used often in programming. They are an abstract data structure of a collection of data that follows one primary rule. It adheres to last in, first out. (LIFO)
 
 Similar to a stack of plates, you'll add onto the top, and also remove from the top.
 
@@ -37,7 +37,7 @@ The idea is that an array is too heavy-handed for a stack. We won't need indicie
 
 ## Big O Notation for Stacks
 
-Below are times for implmeneting with a singly-linked list.
+Below are times for implementing with a singly-linked list.
 
 - Insertion: `O(1)`
 - Removal: `O(1)`

@@ -84,8 +84,8 @@ All of these functions can be written identically, with exception for the three 
 
 What are the potential scenarios to use one variant over the other?
 
-- InOrder is used commonly with BSTs; we get all nodes in the tree in their underlying order. The result will be sorted ascendingly.
-- PreOrder can be used to "export" a tree struture so that it is easly reconstructed or copied. We can iterate over the result, knowing that our first item is our root, and reconstruct it knowing that each item iterated on would become a new child node if it is less than the previous item.
+- InOrder is used commonly with BSTs; we get all nodes in the tree in their underlying order. The result will be sorted in ascending order.
+- PreOrder can be used to "export" a tree structure so that it is easily reconstructed or copied. We can iterate over the result, knowing that our first item is our root, and reconstruct it knowing that each item iterated on would become a new child node if it is less than the previous item.
 
 ## BFS vs DFS - Which to use?
 

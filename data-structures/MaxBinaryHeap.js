@@ -16,7 +16,7 @@ class MaxBinaryHeap {
 		return Math.floor((childIdx - 1) / 2)
 	}
 
-	getChildrenIdicies(parentIdx) {
+	getChildrenIndicies(parentIdx) {
 		const leftIdx = parentIdx * 2 + 1
 		const rightIdx = parentIdx * 2 + 2
 		return [leftIdx, rightIdx]
@@ -67,7 +67,7 @@ class MaxBinaryHeap {
 		const length = this.values.length
 		const element = this.values[idx]
 		while (true) {
-			const [leftChildIdx, rightChildIdx] = this.getChildrenIdicies(idx)
+			const [leftChildIdx, rightChildIdx] = this.getChildrenIndicies(idx)
 			// get child values, guard for out of bounds errors
 			const leftChild = leftChildIdx < length ? this.values[leftChildIdx] : null
 			const rightChild = rightChildIdx < length ? this.values[rightChildIdx] : null
