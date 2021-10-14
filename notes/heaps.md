@@ -4,7 +4,7 @@ Heaps are a type of tree data structure. All the rules that apply to general tre
 
 ## Binary Heaps
 
-A binary heap is a type of heap that is very similar to a binary tree structure, but it has different rules. Each node can only have two child nodes at most. However, order of what is left and right does not matter, unlike a BST. There are two primary types of binary heaps:
+A binary heap is a type of heap that is very similar to a binary tree structure, but it has different rules. Each node can only have two child nodes at most. However, order of what is left and right does not matter, unlike a BST. There are **two primary types** of binary heaps:
 
 - MaxBinaryHeap: In a MaxBinaryHeap, parent nodes are always larger than child nodes.
 - MinBinaryHeap: In a MinBinaryHeap, parent nodes are always smaller than child nodes.
@@ -30,6 +30,18 @@ Binary heaps are used to implement Priority Queues, another data structure, whic
   47  12  24  3
 ```
 
+### MinBinaryHeap
+
+The only rule with a min binary heap is that the children are larger in value than the parent node.
+
+```js
+        3
+      /    \
+    18      31
+   /  \    /  \
+  81  27  39   81
+```
+
 ### Not a Binary Heap
 
 These are the same numbers as our MaxBinaryHeap, but in a specified order. This is now a Binary Search Tree. The smaller values are on the left, larger on the right.
@@ -44,21 +56,9 @@ These are the same numbers as our MaxBinaryHeap, but in a specified order. This 
 3   31
 ```
 
-### MinBinaryHeap
-
-The only rule with a min binary heap is that the children are larger in value than the parent node.
-
-```js
-        3
-      /    \
-    18      31
-   /  \    /  \
-  81  27  39   81
-```
-
 ## Implementing a Binary Heap
 
-There are a few ways to represent a binary heap. We could do the same thing we do for binary search trees, with node classes, etc. We can also just use the built in List/Array data type in many programming languages. This is the easy way. For implementations, see `/data-structures/snippets/MaxBinaryHeap.js`.
+There are a few ways to represent a binary heap. We could do the same thing we do for binary search trees, with node classes, etc. We can also just use the built in List/Array data type in many programming languages. This is the easy way. For implementations, see `/data-structures/snippets/MaxBinaryHeap.js`.  We can very easily store the values of nodes into a flat array. It just makes it easy, and we work with them with indicies.
 
 ### Storage
 
@@ -91,3 +91,11 @@ When removing a node from a MaxBinaryHeap, we are usually set to remove the larg
 - Adjust (sink down) that value to the appropriate place, swapping along the way
   - Compare with the largest child, if the child node is larger, swap them (max heap)
   - If both children are smaller, it found a proper position in the heap (max heap)
+
+## Big O Notion
+
+- Insertion - `O(logn)` - very efficient for storing data
+- Removal - `O(logn)` - very efficient for storing data
+- Insertion (worst case) - `O(logn)` - since they are always equally filled out, this doesn't change
+- Removal (worst case) - `O(logn)` - since they are always equally filled out, this doesn't change
+- Searching - `O(n)` - not optimized for searching, since there isn't really any true order to them. We can get close, but we're kind of guessing with each iteration.  We'll eventually find it, but it would be better to use another data structure such as a BST if search is prioritized. If we're looking for something near the top of our heap (max-heap), we can cross off half of the heap at an earlier level, but there's no guarantee. Technically `O(n/2)`, but it simplifies to `O(n)`, linear time.
