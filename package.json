@@ -4,11 +4,49 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ts:build": "rm -rf ./typescript/dist && tsc -w",
+    "ts:run": "nodemon dist/index.js",
     "start": "nodemon --exec babel-node",
-		"lint": "npx prettier ./**/* --check",
-		"lint:fix": "npx prettier ./**/* --write"
+    "lint": "npx prettier ./**/* --check",
+    "lint:fix": "npx prettier ./**/* --write"
   },
-  "keywords": [],
+  "keywords": [
+    "ts",
+    "js",
+    "typescript",
+    "javascript",
+    "data structures",
+    "algorithms",
+    "trees",
+    "binary trees",
+    "binary search tree",
+    "bst",
+    "linked list",
+    "singly linked list",
+    "doubly linked list",
+    "heap",
+    "binary heap",
+    "max binary heap",
+    "min binary heap",
+    "priority queue",
+    "hash map",
+    "hash table",
+    "queue",
+    "stack",
+    "big o notation",
+    "recursion",
+    "searching",
+    "sorting",
+    "bubble sort",
+    "selection sort",
+    "insertion sort",
+    "merge sort",
+    "mergesort",
+    "quick sort",
+    "quicksort",
+    "radix sort",
+    "radixsort"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,8 +55,10 @@
     "nodemon": "^2.0.9"
   },
   "devDependencies": {
+    "@types/node": "^16.11.0",
     "altheajs-prettier-config": "^1.2.0",
+    "concurrently": "^6.2.0",
     "prettier": "2.3.2"
   },
-	"prettier": "altheajs-prettier-config"
+  "prettier": "altheajs-prettier-config"
 }
