@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ts:build": "rm -rf ./typescript/dist && tsc -w",
-    "ts:run": "nodemon dist/index.js",
+    "ts:dev": "rm -rf ./typescript/dist && tsc -w",
     "start": "nodemon --exec babel-node",
     "lint": "npx prettier ./**/* --check",
     "lint:fix": "npx prettier ./**/* --write"
