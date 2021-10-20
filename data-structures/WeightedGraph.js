@@ -148,6 +148,7 @@ class WeightedGraph {
 			}
 		}
 		// construct output return the list of nodes that create the shortest path, in order
+		// TODO: calculate and return the total distance
 		return path.concat(smallest).reverse()
 	}
 }
@@ -161,7 +162,10 @@ geomap.addEdge('Greeley', 'Ft. Collins', 35)
 geomap.addEdge('Boulder', 'Longmont', 15)
 geomap.addEdge('Golden', 'Boulder', 20)
 geomap.addEdge('Denver', 'Golden', 10)
+geomap.addEdge('Longmont', 'Ft. Collins', 25)
 log(geomap.adjacencyList)
+let shortestDrive = geomap.findShortestPath('Greeley', 'Longmont')
+log(shortestDrive)
 
 // Find the shortest path from A to E
 const graph = new WeightedGraph()
@@ -176,10 +180,10 @@ graph.addEdge('E', 'B', 3)
 log(graph.adjacencyList)
 let path = graph.findShortestPath('A', 'E')
 log(path)
-path = graph.findShortestPath('A', 'F')
-log(path)
-path = graph.findShortestPath('D', 'E')
-log(path)
-path = graph.findShortestPath('B', 'F')
-log(path)
+// path = graph.findShortestPath('A', 'F')
+// log(path)
+// path = graph.findShortestPath('D', 'E')
+// log(path)
+// path = graph.findShortestPath('B', 'F')
+// log(path)
 
