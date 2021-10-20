@@ -89,6 +89,9 @@ class PriorityQueue {
 	}
 }
 
+module.exports = PriorityQueue
+
+// Testing
 const ER = new PriorityQueue()
 ER.enqueue('common cold', 5)
 ER.enqueue('high fever', 3)
