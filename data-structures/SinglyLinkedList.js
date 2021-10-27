@@ -169,6 +169,39 @@ class SinglyLinkedList {
 		}
 	}
 
+	// checks if the linked list is cyclical
+	hasCycle() {
+		if (!this.head || !this.head.next) return false
+		let slow = this.head
+		let fast = this.head
+		while (slow && fast && fast.next) {
+			slow = slow.next
+			fast = fast.next.next
+			if (slow === fast) return true
+		}
+		return false
+	}
+
+	// checks for cycle, and if so returns the node where the cycle starts
+	findCycleStart() {
+		if (this.hasCycle()) {
+			let slow = this.head
+			let fast = this.head
+			while (fast && fast.next) {
+				slow = slow.next
+				fast = fast.next.next
+				if (slow === fast) {
+					fast = this.head
+					while (slow !== fast) {
+						slow = slow.next
+						fast = fast.next
+					}
+					return slow
+				}
+			}
+		return -1
+	}
+
 	// prints out the node values as an array
 	print() {
 		let arr = []
