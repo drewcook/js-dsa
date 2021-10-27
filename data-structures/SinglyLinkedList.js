@@ -169,6 +169,35 @@ class SinglyLinkedList {
 		}
 	}
 
+	// reverses a section of the list from particular start and end nodes
+	// start and end are positions, or indicies, within the list and are included in the reversal
+	// rejoins non-reversed parts back to the reversed part at end
+	reverseSection(start, end) {
+		if (!this.head) return undefined
+		if (start === end) return this.head
+		let curr = this.head
+		let prev = null
+		let counter = 1
+		while (curr && counter < start) {
+			prev = curr
+			curr = curr.next
+			counter++
+		}
+		let nodeBeforeReverse = prev
+		let lastNodeInReverse = curr
+		while (curr && counter < end + 1) {
+			let next = curr.next
+			curr.next = prev
+			prev = curr
+			curr = next
+			counter++
+		}
+		if (nodeBeforeReverse !== null) nodeBeforeReverse.next = prev
+		if (lastNodeInReverse !== null) lastNodeInReverse.next = curr
+		if (start === 1) this.head = prev
+		return this.head
+	}
+
 	// checks if the linked list is cyclical
 	hasCycle() {
 		if (!this.head || !this.head.next) return false
@@ -199,6 +228,7 @@ class SinglyLinkedList {
 					return slow
 				}
 			}
+		}
 		return -1
 	}
 
@@ -218,19 +248,22 @@ class SinglyLinkedList {
 const list = new SinglyLinkedList()
 list.push('hello')
 list.push('there')
-list.push('300')
+list.push(300)
 list.push(200)
 list.push(600)
 list.shift()
 list.unshift('first')
 list.shift()
-list.unshift('firstssss')
+list.unshift('first!')
 list.insert(1, 'jack')
 list.remove(4)
-list.insert(4, 'LAST')
-list.remove(1)
-list.remove(0)
+list.insert(5, 'LAST')
+// list.remove(1)
+// list.remove(0)
 
+console.log('has cycle', list.hasCycle())
 list.print()
 list.reverse()
+list.print()
+list.reverseSection(3, 6)
 list.print()
