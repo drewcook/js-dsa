@@ -13,3 +13,7 @@ or
 
 npm start -- ./snippets/add1_timing.js
 ```
+
+<p align="center">
+ <img src="https://visitor-badge.glitch.me/badge?page_id=drewcook.js-dsa" alt="visitor count"/>
+</p>
