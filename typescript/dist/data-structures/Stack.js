@@ -51,5 +51,5 @@ const firstRemoved = stack.remove();
 stack.add(500);
 stack.add(600);
 stack.remove();
-log_1.default(stack, firstRemoved);
+(0, log_1.default)(stack, firstRemoved);
 //# sourceMappingURL=Stack.js.map

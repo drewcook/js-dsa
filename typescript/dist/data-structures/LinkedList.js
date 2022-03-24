@@ -105,5 +105,5 @@ list.reverse();
 list.pop();
 const removedHead = list.shift();
 list.unshift('sixth');
-log_1.default(list, removedHead);
+(0, log_1.default)(list, removedHead);
 //# sourceMappingURL=LinkedList.js.map

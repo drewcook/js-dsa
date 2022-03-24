@@ -49,5 +49,5 @@ queue.enqueue(400);
 const firstRemoved = queue.dequeue();
 queue.enqueue(500);
 queue.dequeue();
-log_1.default(queue, firstRemoved);
+(0, log_1.default)(queue, firstRemoved);
 //# sourceMappingURL=Queue.js.map
